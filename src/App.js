@@ -1,27 +1,29 @@
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Navigate,
-  Route,
-} from "react-router-dom";
-import SignIn from "./features/Login/signin";
-import SignUp from "./features/Login/signup";
 import "./App.css";
-import SideNavBar from "./components/Navigation";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Sidebar from "./components/Navigation/index.jsx";
+import Dashboard from "./components/pages/Dashboard.jsx";
+import About from "./components/pages/About.jsx";
+import Analytics from "./components/pages/Analytics.jsx";
+import Comment from "./components/pages/Comment.jsx";
+// import Product from "./pages/Product.jsx";
+// import ProductList from "./pages/ProductList.jsx";
 
 const App = () => {
   return (
-    <Router>
-      <div>
+    <BrowserRouter>
+      <Sidebar>
         <Routes>
-          <Route path="/" element={<Navigate to="/signup" />} />
-          <Route path="/signup" element={<SignUp />} />
-          <Route path="/signin" element={<SignIn />} />
-          <Route path="/home" element={<SideNavBar />} />
+          <Route path="/" element={<Dashboard />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/comment" element={<Comment />} />
+          <Route path="/analytics" element={<Analytics />} />
+          {/* <Route path="/product" element={<Product />} /> */}
+          {/* <Route path="/productList" element={<ProductList />} /> */}
         </Routes>
-      </div>
-    </Router>
+      </Sidebar>
+    </BrowserRouter>
   );
 };
 

@@ -40,7 +40,7 @@ html {
   position: fixed;
   top: 0;
   left: 0;
-  width: 85px;
+  width: 35px;
   height: 100%;
   transition: 0.3s;
   scrollbar-width: none;
@@ -56,24 +56,16 @@ html {
   width: 260px;
 }
 
-.menu:hover li span:nth-child(2) {
-  display: block;
-}
-
 .menu-content li {
   list-style: none;
   border-radius: 0px 50px 50px 0;
   transition: 0.3s;
   margin-bottom: 20px;
-  padding-left: 20px;
+  /* padding-left: 10px; */
 }
 
 .menu-content li:hover {
   background: #0c0c0c;
-}
-
-.menu-content li span:nth-child(2) {
-  display: none;
 }
 
 a {
@@ -87,9 +79,22 @@ a {
 .material-symbols-outlined {
   padding: 10px;
   font-size: 25px;
-  margin-right: 10px;
+  /* margin-right: 10px; */
   border-radius: 50%;
   background: #0c0c0c;
+
+  /* Align icons to the left */
+  justify-content: flex-start;
+}
+
+/* Hide menu names by default */
+.menu-content li span:nth-child(2) {
+  display: none;
+}
+
+/* Show menu names on hover */
+.menu-content li:hover span:nth-child(2) {
+  display: block;
 }
 
 .center-container {
@@ -107,6 +112,18 @@ a {
   background-color: #f9f9f9;
 }
 
+.aside_avatar {
+  border-radius: 0.125rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.05em;
+  width: 35px;
+  min-width: 35px;
+  height: 35px;
+  background: var(--sidebar-bg-user);
+  color: #fff;
+}
 .form-container h2 {
   text-align: center;
 }
@@ -164,4 +181,57 @@ a {
 
 .form-container .signin a:hover {
   text-decoration: underline;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+.container {
+  display: flex;
+}
+main {
+  width: 100%;
+  padding: 20px;
+}
+.sidebar {
+  background: #000;
+  color: #fff;
+  height: 100vh;
+  width: 200px;
+  transition: all 0.5s;
+}
+.top_section {
+  display: flex;
+  align-items: center;
+  padding: 20px 15px;
+}
+.logo {
+  font-size: 30px;
+}
+.bars {
+  display: flex;
+  font-size: 25px;
+  margin-left: 50px;
+}
+.link {
+  display: flex;
+  color: #fff;
+  padding: 10px 15px;
+  gap: 15px;
+  transition: all 0.5s;
+}
+.link:hover {
+  background: lightskyblue;
+  color: #000;
+  transition: all 0.5s;
+}
+.active {
+  background: lightskyblue;
+  color: #000;
+}
+.icon,
+.link_text {
+  font-size: 20px;
 }

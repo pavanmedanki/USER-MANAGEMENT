@@ -61,7 +61,7 @@ const SignIn = () => {
     <div className="center-container">
       <div className="form-container">
         {!isFormvalid && form && validateForm && (
-          <span style={{ color: "#FF0000" }}>Invalid Username or Password</span>
+          <span style={{ color: "#FF0000" }}>Invalid login details. Please try again.</span>
         )}
         <h2>Sign In</h2>
         <form onSubmit={handleSubmit}>
@@ -94,7 +94,7 @@ const SignIn = () => {
           </label>
           <br />
           <button type="submit" className="submit-button">
-            Submit
+            Login
           </button>
         </form>
         <span className="signin">
