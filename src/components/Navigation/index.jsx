@@ -51,10 +51,7 @@ const Sidebar = ({ children }) => {
     <div className="container">
       <div style={{ width: isOpen ? "300px" : "50px" }} className="sidebar">
         <div>
-          <div
-            className="top_section"
-            style={{ justifyContent: "space-between" }}
-          >
+          <div style={{ display: "flex", justifyContent: "space-between" }}>
             <div
               style={{ marginLeft: isOpen ? "50px" : "0px" }}
               className="bars"

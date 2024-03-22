@@ -1,0 +1,9 @@
+[data-theme="dark"] {
+  --text-color: #e6e6e6;
+  --bg-color: #c82838;
+  --sidebar-bg-color: #ddb31c;
+  --sidebar-bg-top: #e2d278;
+  --kpi-bg: #161616;
+  --sidebar-bg-user: #564700;
+  --sidebar-border: #ffffff;
+}

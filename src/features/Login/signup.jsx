@@ -61,7 +61,7 @@ const SignUp = () => {
 
     if (validateForm()) {
       localStorage.setItem("formFields", JSON.stringify(formData));
-      navigate("/signin");
+      navigate("/");
     }
   };
   function handleClear() {
@@ -145,9 +145,7 @@ const SignUp = () => {
               <span className="error-message">{errors.confirmPassword}</span>
             )}
           </label>
-          <div
-            className="signin" style={{ justifyItems: ""}}
-          >
+          <div className="signin" style={{ justifyItems: "" }}>
             <button onClick={handleClear}>Clear</button>
             <button type="submit" className="submit-button">
               Submit
@@ -155,7 +153,7 @@ const SignUp = () => {
           </div>
         </form>
         <span className="signin">
-          Already have an account? <Link to="/signin">Sign In</Link>
+          Already have an account? <Link to="/">Sign In</Link>
         </span>
       </div>
     </div>
