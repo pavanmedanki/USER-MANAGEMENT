@@ -1,9 +1,10 @@
 [data-theme="dark"] {
   --text-color: #e6e6e6;
-  --bg-color: #c82838;
-  --sidebar-bg-color: #ddb31c;
-  --sidebar-bg-top: #e2d278;
+  --bg-color: #000000;
+  --sidebar-bg-color: #3b3934;
+  --sidebar-bg-top: #74736d;
   --kpi-bg: #161616;
-  --sidebar-bg-user: #564700;
+  --sidebar-bg-user: #252421;
   --sidebar-border: #ffffff;
+  --header-border: #666666;
 }

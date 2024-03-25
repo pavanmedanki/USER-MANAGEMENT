@@ -5,7 +5,7 @@ import { RecoilRoot } from "recoil";
 import NavBar from "./components/Navigation/logo.jsx";
 import SignIn from "./features/Login/signin.jsx";
 import SignUp from "./features/Login/signup.jsx";
-import Dashboard from "./components/pages/Dashboard/index.jsx";
+import Dashboard from "./components/pages/Dashboard/index.js";
 import CostOverview from "./components/pages/Costoverview/index.jsx";
 import CostAnalysis from "./components/pages/Costanalysis/index.jsx";
 import CostOptimization from "./components/pages/Costoptimization/index.jsx";

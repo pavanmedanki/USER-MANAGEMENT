@@ -175,7 +175,7 @@ const NavBar = ({ userRole, handleLogouts, children }) => {
                 >
                   {theme === "dark" && <FaCheck />}{" "}
                 </span>
-                {/* <span
+                <span
                   className={`theme blue  ${theme === "blue" ? "active" : ""}`}
                   onClick={() => handleTheme("blue")}
                   onKeyDown={() => handleTheme("blue")}
@@ -183,7 +183,7 @@ const NavBar = ({ userRole, handleLogouts, children }) => {
                   tabIndex={-4}
                 >
                   {theme === "blue" && <FaCheck />}{" "}
-                </span> */}
+                </span>
                 <span
                   className={`theme light  ${
                     theme === "light" ? "active" : ""

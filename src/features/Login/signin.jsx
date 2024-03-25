@@ -54,7 +54,7 @@ const SignIn = () => {
 
     if (validateForm() && isFormvalid) {
       localStorage.setItem("auth", true);
-      navigate("/itsm");
+      navigate("/dashboard");
     }
   };
 
