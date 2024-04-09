@@ -674,3 +674,345 @@ export function CostRelationIcon() {
     </svg>
   );
 }
+
+export const AreaChartSvg = (props) => {
+  return (
+    <div {...props}>
+      <svg
+        stroke="currentColor"
+        fill="currentColor"
+        strokeWidth="0"
+        viewBox="0 0 1024 1024"
+        height="1em"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path d="M888 792H200V168c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v688c0 4.4 3.6 8 8 8h752c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm-616-64h536c4.4 0 8-3.6 8-8V284c0-7.2-8.7-10.7-13.7-5.7L592 488.6l-125.4-124a8.03 8.03 0 0 0-11.3 0l-189 189.6a7.87 7.87 0 0 0-2.3 5.6V720c0 4.4 3.6 8 8 8z"></path>
+      </svg>
+    </div>
+  );
+};
+export const BarChartSvg = (props) => {
+  return (
+    <div {...props}>
+      <svg
+        stroke="currentColor"
+        fill="currentColor"
+        strokeWidth="0"
+        viewBox="0 0 1024 1024"
+        height="1em"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path d="M888 792H200V168c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v688c0 4.4 3.6 8 8 8h752c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm-600-80h56c4.4 0 8-3.6 8-8V560c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v144c0 4.4 3.6 8 8 8zm152 0h56c4.4 0 8-3.6 8-8V384c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v320c0 4.4 3.6 8 8 8zm152 0h56c4.4 0 8-3.6 8-8V462c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v242c0 4.4 3.6 8 8 8zm152 0h56c4.4 0 8-3.6 8-8V304c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v400c0 4.4 3.6 8 8 8z"></path>
+      </svg>
+    </div>
+  );
+};
+export const LineBarChart = (props) => {
+  return (
+    <div {...props}>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
+        role="img"
+        width="1em"
+        height="1em"
+        preserveAspectRatio="xMidYMid meet"
+        viewBox="0 0 16 16"
+      >
+        <path fill="currentColor" d="M5 11h3v5H5v-5z" />
+        <path fill="currentColor" d="M1 14h3v2H1v-2z" />
+        <path fill="currentColor" d="M13 12h3v4h-3v-4z" />
+        <path fill="currentColor" d="M9 9h3v7H9V9z" />
+        <path
+          fill="currentColor"
+          d="M16 .07l-5.68 4.97l-5.47-1.7L0 7.1V9l5.15-4l5.53 1.72L16 2.06V.07z"
+        />
+      </svg>
+    </div>
+  );
+};
+export const LineChartSvg = (props) => {
+  return (
+    <div {...props}>
+      <svg
+        stroke="currentColor"
+        fill="currentColor"
+        strokeWidth="0"
+        viewBox="0 0 1024 1024"
+        height="1em"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path d="M888 792H200V168c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v688c0 4.4 3.6 8 8 8h752c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM305.8 637.7c3.1 3.1 8.1 3.1 11.3 0l138.3-137.6L583 628.5c3.1 3.1 8.2 3.1 11.3 0l275.4-275.3c3.1-3.1 3.1-8.2 0-11.3l-39.6-39.6a8.03 8.03 0 0 0-11.3 0l-230 229.9L461.4 404a8.03 8.03 0 0 0-11.3 0L266.3 586.7a8.03 8.03 0 0 0 0 11.3l39.5 39.7z"></path>
+      </svg>
+    </div>
+  );
+};
+export const PieChartSvg = (props) => {
+  return (
+    <div {...props}>
+      <svg
+        stroke="currentColor"
+        fill="currentColor"
+        strokeWidth="0"
+        viewBox="0 0 1024 1024"
+        height="1em"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path d="M864 518H506V160c0-4.4-3.6-8-8-8h-26a398.46 398.46 0 0 0-282.8 117.1 398.19 398.19 0 0 0-85.7 127.1A397.61 397.61 0 0 0 72 552a398.46 398.46 0 0 0 117.1 282.8c36.7 36.7 79.5 65.6 127.1 85.7A397.61 397.61 0 0 0 472 952a398.46 398.46 0 0 0 282.8-117.1c36.7-36.7 65.6-79.5 85.7-127.1A397.61 397.61 0 0 0 872 552v-26c0-4.4-3.6-8-8-8zM705.7 787.8A331.59 331.59 0 0 1 470.4 884c-88.1-.4-170.9-34.9-233.2-97.2C174.5 724.1 140 640.7 140 552c0-88.7 34.5-172.1 97.2-234.8 54.6-54.6 124.9-87.9 200.8-95.5V586h364.3c-7.7 76.3-41.3 147-96.6 201.8zM952 462.4l-2.6-28.2c-8.5-92.1-49.4-179-115.2-244.6A399.4 399.4 0 0 0 589 74.6L560.7 72c-4.7-.4-8.7 3.2-8.7 7.9V464c0 4.4 3.6 8 8 8l384-1c4.7 0 8.4-4 8-8.6zm-332.2-58.2V147.6a332.24 332.24 0 0 1 166.4 89.8c45.7 45.6 77 103.6 90 166.1l-256.4.7z"></path>
+      </svg>
+    </div>
+  );
+};
+export const DoughNutChartSvg = (props) => {
+  return (
+    <div {...props}>
+      <svg
+        stroke="currentColor"
+        fill="currentColor"
+        strokeWidth="0"
+        viewBox="0 0 24 24"
+        height="1em"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path d="M12,2C6.486,2,2,6.486,2,12s4.486,10,10,10s10-4.486,10-10S17.514,2,12,2z M19.931,11h-3.032 C16.5,9.044,14.956,7.5,13,7.102V4.069C16.611,4.522,19.478,7.389,19.931,11z M12,9c1.654,0,3,1.346,3,3s-1.346,3-3,3s-3-1.346-3-3 S10.346,9,12,9z M12,20c-4.411,0-8-3.589-8-8c0-4.072,3.061-7.436,7-7.931v3.032C8.721,7.565,7,9.586,7,12c0,2.757,2.243,5,5,5 c2.414,0,4.435-1.721,4.898-4h3.032C19.436,16.939,16.072,20,12,20z"></path>
+      </svg>
+    </div>
+  );
+};
+export const HorizontalChartSvg = (props) => {
+  return (
+    <div {...props}>
+      <svg
+        stroke="currentColor"
+        fill="currentColor"
+        strokeWidth="0"
+        viewBox="0 0 24 24"
+        height="1em"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g>
+          <path fill="none" d="M0 0h24v24H0z"></path>
+          <path d="M12 3v4H3V3h9zm4 14v4H3v-4h13zm6-7v4H3v-4h19z"></path>
+        </g>
+      </svg>
+    </div>
+  );
+};
+export const Loader = ({ className = "", content }) => {
+  return (
+    <div
+      className={`vtx-loader flex items-center justify-center space-x-1 ${className}`}
+    >
+      <svg
+        className="vtx-loader-spinner"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
+        focusable="false"
+        width="1.2em"
+        height="1.2em"
+        preserveAspectRatio="xMidYMid meet"
+        viewBox="0 0 24 24"
+      >
+        <g fill="none">
+          <path
+            d="M12 22c5.523 0 10-4.477 10-10h-3a7 7 0 0 1-7 7v3z"
+            fill="currentColor"
+          />
+          <path
+            d="M2 12C2 6.477 6.477 2 12 2v3a7 7 0 0 0-7 7H2z"
+            fill="currentColor"
+          />
+        </g>
+      </svg>
+      <span
+        className={`vtx-loader-content pl-1 ${content ? "block" : "hidden"}`}
+      >
+        {content}
+      </span>
+    </div>
+  );
+};
+export const getBytesConversion = (bytes) => {
+  // if (bytes == 0) return '0 Bytes';
+  // var k = 1000000000000,
+  //     dm = decimalPoint || 2,
+  //     sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'],
+  //     i = Math.floor(Math.log(bytes) / Math.log(k));
+  // return parseFloat((bytes / Math.pow(k, i)).toFixed(dm)) + ' ' + sizes[i];
+  return bytes + "GB";
+};
+export const HiOutlineDotsVertical = ({ size = "1em", ...rest }) => {
+  return (
+    <div {...rest}>
+      <svg
+        stroke="currentColor"
+        fill="none"
+        strokeWidth="0"
+        viewBox="0 0 24 24"
+        height={size}
+        width={size}
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+          d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
+        ></path>
+      </svg>
+    </div>
+  );
+};
+export const FiDownload = ({ size = "1em", ...rest }) => {
+  return (
+    <div {...rest}>
+      <svg
+        stroke="currentColor"
+        fill="none"
+        strokeWidth="2"
+        viewBox="0 0 24 24"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        height={size}
+        width={size}
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+        <polyline points="7 10 12 15 17 10"></polyline>
+        <line x1="12" y1="15" x2="12" y2="3"></line>
+      </svg>
+    </div>
+  );
+};
+export const FiMail = ({ size = "1em", ...rest }) => {
+  return (
+    <div {...rest}>
+      <svg
+        stroke="currentColor"
+        fill="none"
+        strokeWidth="2"
+        viewBox="0 0 24 24"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        height={size}
+        width={size}
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+        <polyline points="22,6 12,13 2,6"></polyline>
+      </svg>
+    </div>
+  );
+};
+export const FiRefreshCcw = ({ size = "1em", ...rest }) => {
+  return (
+    <div {...rest}>
+      <svg
+        stroke="currentColor"
+        fill="none"
+        strokeWidth="2"
+        viewBox="0 0 24 24"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        height={size}
+        width={size}
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <polyline points="1 4 1 10 7 10"></polyline>
+        <polyline points="23 20 23 14 17 14"></polyline>
+        <path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15"></path>
+      </svg>
+    </div>
+  );
+};
+export const FiFilter = ({ size = "1em", ...rest }) => {
+  return (
+    <div {...rest}>
+      <svg
+        stroke="currentColor"
+        fill="none"
+        strokeWidth="2"
+        viewBox="0 0 24 24"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        height={size}
+        width={size}
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+      </svg>
+    </div>
+  );
+};
+export const InfoIcon = () => {
+  return (
+    <svg
+      stroke="currentColor"
+      fill="currentColor"
+      strokeWidth="0"
+      viewBox="0 0 512 512"
+      height="1.3em"
+      width="1.3em"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z" />
+    </svg>
+  );
+};
+export const AnalysisIcon = () => {
+  return (
+    <div>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        id="Layer_2"
+        viewBox="0 0 18 18"
+        width="16px"
+        height="16px"
+      >
+        <defs>
+          <style>{".cls-1{fill:currentColor;stroke-width:0}"}</style>
+        </defs>
+        <g id="Layer_52">
+          <path
+            d="M7.16 0c3.56 0 6.55 2.56 7.08 6.08.28 1.87-.13 3.59-1.19 5.15-.08.11-.06.17.04.25 1.13.94 2.25 1.87 3.37 2.81.32.26.64.52.95.8.51.45.69 1.01.52 1.66-.17.65-.6 1.07-1.26 1.2-.65.14-1.2-.07-1.62-.59-1.15-1.41-2.31-2.81-3.49-4.19-.03-.03-.06-.06-.08-.09-.08-.11-.15-.1-.25-.03-1.04.73-2.2 1.16-3.47 1.25-2.28.17-4.22-.58-5.79-2.21C.81 10.91.17 9.47.03 7.82-.16 5.48.61 3.5 2.31 1.89 3.48.79 4.88.18 6.48.03L6.82 0h.34ZM1.42 7.16c-.04 3.13 2.54 5.78 5.75 5.77 3.16 0 5.74-2.56 5.75-5.72 0-3.2-2.53-5.75-5.69-5.79-3.21-.04-5.83 2.6-5.81 5.74Z"
+            className="cls-1"
+          />
+          <path
+            d="M10.59 4.56c0 .14-.08.23-.19.31-.99.77-1.98 1.55-2.97 2.32q-.35.27-.66-.04c-.38-.4-.76-.79-1.14-1.2-.09-.1-.14-.1-.24-.02l-1.61 1.4c-.19.16-.34.19-.5.08-.2-.14-.22-.39-.03-.56.29-.26.59-.52.88-.77.42-.36.84-.72 1.26-1.09.12-.11.2-.12.32.01.42.46.86.9 1.27 1.35.12.14.2.12.33.02.85-.68 1.72-1.35 2.57-2.02.09-.07.18-.15.3-.15.22-.02.39.14.39.36ZM9.71 8.12V6.54c0-.4.37-.65.72-.5.21.09.31.26.31.47v3.23c0 .3-.25.53-.53.53s-.5-.24-.51-.55v-1.6Z"
+            className="cls-1"
+          />
+          <path
+            d="M6.07 8.7v.98c0 .34-.23.59-.52.59-.29 0-.52-.25-.52-.59V7.7c0-.32.23-.57.52-.57.29 0 .52.24.52.57v1ZM9.2 8.74V9.7c-.03.34-.24.57-.53.56-.31 0-.5-.24-.5-.6V7.77c0-.33.19-.55.5-.57.27-.02.51.2.53.52.02.34 0 .68 0 1.02ZM7.62 9.21v.53c0 .29-.21.51-.49.53a.49.49 0 0 1-.53-.44 5.99 5.99 0 0 1 0-1.27c.03-.25.29-.44.53-.42.26.02.46.22.48.48.01.19 0 .39 0 .58ZM3.47 9.25v-.52c0-.27.21-.47.48-.49.23-.02.49.16.53.4.06.4.06.81 0 1.21-.03.26-.29.43-.54.41-.27-.03-.47-.23-.47-.5v-.52Z"
+            className="cls-1"
+          />
+        </g>
+      </svg>
+    </div>
+  );
+};
+export const RiFolderChartFill = ({ size = "1em", ...rest }) => {
+  return (
+    <div {...rest}>
+      <svg
+        stroke="currentColor"
+        fill="currentColor"
+        strokeWidth="0"
+        viewBox="0 0 24 24"
+        height={size}
+        width={size}
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g>
+          <path fill="none" d="M0 0h24v24H0z"></path>
+          <path d="M12.414 5H21a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h7.414l2 2zM11 9v8h2V9h-2zm4 3v5h2v-5h-2zm-8 2v3h2v-3H7z"></path>
+        </g>
+      </svg>
+    </div>
+  );
+};

@@ -9,4 +9,15 @@
   --kpi-text: #535353;
   --sidebar-border: #18325a;
   --header-border: #c6c3bc;
+  --modal-bg-color: #f5f5f5;
+  --g-main-icon-color: #18325a;
+  --g-bg-widget-sidebar: #ffffff;
+  --g-panel-menu-list-bg: #ececec;
+  --g-panel-menu-list-box-shadow: #2f2f2f36;
+  --g-panel-menu-list-text-main: #7d7d7d;
+  --g-panel-menu-list-text-hover: #3c3c3c;
+  --g-panel-menu-list-text-icon: #3c3c3c;
+  --g-panel-heading-border: #cccccc;
+  --g-table-border: #dcdcdc;
+  --g-table-header-bg-color: #e4e4e4;
 }

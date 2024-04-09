@@ -1,0 +1,20 @@
+[data-theme="blue"] {
+  --text-color: #ffffff;
+  --bg-color: #0c192d;
+  --sidebar-bg-color: #2f476b;
+  --sidebar-bg-top: #16263c;
+  --kpi-bg: #11233f;
+  --sidebar-bg-user: #113d84;
+  --sidebar-border: #ffffff;
+  --header-border: #666666;
+  --modal-bg-color: #293f61;
+  --g-main-icon-color: #dadada;
+  --g-bg-widget-sidebar: #11233f;
+  --g-panel-text-main: #cccccc;
+  --g-panel-menu-list-bg: #2f476b;
+  --g-panel-menu-list-box-shadow: #2f2f2f36;
+  --g-panel-menu-list-text-main: #c2c2c2;
+  --g-panel-menu-list-text-hover: #ffffff;
+  --g-panel-menu-list-text-icon: #ffffff;
+  --g-panel-heading-border: #6480a1;
+}

@@ -1,5 +1,6 @@
 @import "./components/Assets/theme/dark.css";
 @import "./components/Assets/theme/light.css";
+@import "./components/Assets/theme/blue.css";
 
 #root,
 body,
@@ -11,10 +12,34 @@ html {
   background-color: var(--bg-color);
   color: var(--text-color);
 }
+.rdg {
+  --rdg-header-background-color: var(--sidebar-bg-top);
+  --rdg-color: var(--text-color);
+  --rdg-border-color: var(--text-color) !important;
+  --rdg-background-color: var(--background-color);
+  --rdg-row-hover-background-color: var(--sidebar-bg-color);
+  --rdg-selection-color: "transparent";
+}
 main {
   width: 100%;
   /* padding: 20px; */
   /* height: 100%; */
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--sidebar-bg-top);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 .sidebar {
   background: var(--sidebar-bg-color);
@@ -139,6 +164,33 @@ main {
   @apply hidden;
 }
 
+.FixedDiv {
+  position: fixed;
+  background: transparent;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  bottom: 0;
+
+  &_backdrop {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  &_cnt {
+    width: 250px;
+    right: 10px;
+    bottom: 10px;
+    position: absolute;
+    background-color: var(--g-panel-bg-main);
+    color: var(--g-panel-text-main);
+    padding: 20px;
+  }
+}
 .aside_menus {
   z-index: 9999;
   padding: 0;

@@ -1,6 +1,7 @@
 import React from "react";
-// import LandingKpi from "./kpi";
 import KpiOneComponent from "../../KPI/kpionecomponent";
+// import ReactECharts from "echarts-for-react";
+import { ChartWidgetComponent } from "../../Widgetcomponent/chartwidget";
 
 const Dashboard = () => {
   const CostOverViewKpiJson = [
@@ -21,6 +22,35 @@ const Dashboard = () => {
       value: 56,
     },
   ];
+  const data = [
+    {
+      count: 1,
+      resource_group: "rg-edxi-botx",
+    },
+    {
+      count: 1,
+      resource_group: "rg-edxi-cloudprism",
+    },
+    {
+      count: 1,
+      resource_group: "rg-edxi-vantagex",
+    },
+    {
+      count: 1,
+      resource_group: "rg-ess-compute",
+    },
+  ];
+
+  const formatChartData = {
+    xAxis: data?.map((e) => e.resource_group),
+    data: [
+      {
+        type: "line",
+        value: data?.map((e) => e?.count),
+      },
+    ],
+  };
+
   return (
     <div className="flex h-full w-full flex-col" style={{ height: "100vh" }}>
       <div
@@ -36,16 +66,11 @@ const Dashboard = () => {
       >
         Executive Dashboard
       </div>
-      {/* <div
-        style={{ height: "55px", background: "var(--sidebar-bg-color)" }}
-      ></div> */}
       <div
         style={{
-          // height: "calc(100vh - 130px)",
           background: "var(--bg-color)",
           color: "var(--text-color)",
           width: "100%",
-          // gap: "10px",
           padding: "10px",
           overflowY: "scroll",
         }}
@@ -53,16 +78,7 @@ const Dashboard = () => {
       >
         <div className="flex flex-row justify-between gap-3">
           {CostOverViewKpiJson?.map((a) => (
-            <div
-              style={{
-                height: "140px",
-                width: "100%",
-                background: "var(--kpi-bg)",
-                color: "var(--kpi-text)",
-              }}
-            >
-              <KpiOneComponent title={a?.title} value={a?.value} />
-            </div>
+            <KpiOneComponent title={a?.title} value={a?.value} />
           ))}
         </div>
 
@@ -70,48 +86,82 @@ const Dashboard = () => {
           <div
             style={{
               width: "100%",
-              height: "330px",
-              background: "var(--kpi-bg)",
               color: "var(--kpi-text)",
               padding: "10px",
             }}
           >
-            {/* <LineChartComponent /> */}
+            <ChartWidgetComponent
+              type="bar"
+              title="Cost Trend (Last 12 Months)"
+              isLoading={false}
+              color={["#B57432"]}
+              userEditAccess={false}
+              series={formatChartData}
+              // handleRefresh={() => handleRefersh()}
+            />
           </div>
           <div
             style={{
               width: "100%",
-              height: "330px",
-              background: "var(--kpi-bg)",
               color: "var(--kpi-text)",
               padding: "10px",
             }}
           >
-            {/* <BarChartComponent /> */}
+            <ChartWidgetComponent
+              type="line"
+              title="Top 10 P&L (YTD)"
+              isLoading={false}
+              color={["#77B489"]}
+              userEditAccess={false}
+              series={formatChartData}
+              // handleRefresh={() => handleRefersh()}
+            />
           </div>
         </div>
         <div className="flex flex-row justify-between gap-3">
           <div
             style={{
               width: "100%",
-              height: "330px",
               padding: "10px",
-              background: "var(--kpi-bg)",
               color: "var(--kpi-text)",
             }}
           >
-            {/* <RaderChartComponent /> */}
+            <ChartWidgetComponent
+              type="pie"
+              title="CTop 10 Division (YTD)"
+              isLoading={false}
+              color={[
+                "#77B489",
+                "#008080",
+                "#2E85D9",
+                "#A78029",
+                "#BBABA0",
+                "#CCC589",
+                "#82A66C",
+                "#63BDF6",
+                "#D7BE82",
+              ]}
+              userEditAccess={false}
+              series={formatChartData}
+              // handleRefresh={() => handleRefersh()}
+            />
           </div>
           <div
             style={{
               width: "100%",
-              height: "330px",
               padding: "10px",
-              background: "var(--kpi-bg)",
               color: "var(--kpi-text)",
             }}
           >
-            {/* <DynamicBarComponent /> */}
+            <ChartWidgetComponent
+              type="bar"
+              title="Top 10 Cost By Project (YTD)"
+              isLoading={false}
+              color={["#2E85D9"]}
+              userEditAccess={false}
+              series={formatChartData}
+              // handleRefresh={() => handleRefersh()}
+            />
           </div>
         </div>
       </div>

@@ -7,4 +7,17 @@
   --sidebar-bg-user: #252421;
   --sidebar-border: #ffffff;
   --header-border: #666666;
+  --modal-bg-color: #3e3e3f;
+  --g-panel-menu-list-text-main: #666666;
+  --g-main-icon-color: #e6e6e6;
+  --g-bg-widget-sidebar: #161616;
+  --g-panel-menu-list-bg: #282828;
+  --g-panel-menu-list-bg: #282828;
+  --g-panel-menu-list-box-shadow: #2f2f2f36;
+  --g-panel-menu-list-text-main: #666666;
+  --g-panel-menu-list-text-hover: #bcbcbc;
+  --g-panel-menu-list-text-icon: #bcbcbc;
+  --g-panel-heading-border: #707070;
+  --g-table-border: #232323;
+  --g-table-header-bg-color: #2f2f2f;
 }
