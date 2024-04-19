@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { NavLink, useLocation, useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import {
   AlarmIcon,
   Collaboration,
@@ -9,14 +9,9 @@ import {
   FiLogOut,
   GiHamburgerMenu,
   ItsmIcon,
-  LogoLightTheme,
   XplorerIcon,
 } from "../../Assets/Icons";
-import { Route, Routes } from "react-router-dom";
 import { atom, useRecoilValue, useSetRecoilState } from "recoil";
-import AssetXplorer from "../AssetXplorer";
-import ApplicationScorecard from "../Application";
-import ITSM from "../ITSM/indx";
 
 const json = [
   { icons: <ItsmIcon />, title: "ITSM", path: "/dashboard/user" },
@@ -52,9 +47,6 @@ const NavBar = ({ userRole, handleLogouts, children }) => {
   const updateIsMenuOpen = useSetRecoilState(defaultAsideToggleObj);
   const [isToggleOpen, setIsToggleOpen] = React.useState(false);
   const navigate = useNavigate();
-  const location = useLocation();
-
-  console.log(location?.pathname, "location");
 
   const toggle = () => setIsOpen(!isOpen);
   const handleItemClick = (path) => {

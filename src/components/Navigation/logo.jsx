@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { NavLink, useLocation, useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import {
   FaCheck,
   FaChevronDown,
@@ -60,9 +60,6 @@ const NavBar = ({ userRole, handleLogouts, children }) => {
   const updateIsMenuOpen = useSetRecoilState(defaultAsideToggleObj);
   const [isToggleOpen, setIsToggleOpen] = React.useState(false);
   const navigate = useNavigate();
-  const location = useLocation();
-
-  console.log(location?.pathname, "location");
 
   const toggle = () => setIsOpen(!isOpen);
   const handleItemClick = (path) => {

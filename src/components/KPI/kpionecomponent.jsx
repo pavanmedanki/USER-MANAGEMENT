@@ -5,7 +5,7 @@ const KpiOneComponent = ({ title, value }) => {
     <div
       className="flex flex-col w-full h-full p-3"
       style={{
-        border: "1px",
+        border: "1px solid var(--kpi-brdr)",
         borderRadius: "10px",
         background: "var(--kpi-bg)",
         color: "var(--kpi-text)",

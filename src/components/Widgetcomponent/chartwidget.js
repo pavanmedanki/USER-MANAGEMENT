@@ -39,6 +39,7 @@ export const ChartWidgetComponent = (props) => {
     series,
     type,
     displayCount,
+    isdataZoom,
     config,
     isLoading = false,
     isError = false,
@@ -124,23 +125,21 @@ export const ChartWidgetComponent = (props) => {
       top: hasTopLabels ? "30px" : "15px",
       containLabel: true,
     },
-    // legend: {
-    //   // show: true,
-    //   // type: "scroll",
-    //   // icon: "circle",
-    //   // bottom: "10px",
-    //   // textStyle: {
-    //   //   fontSize: 12,
-    //   //   color: "#999",
-    //   // },
-    //   // itemGap: 22.5,
-    //   bottom: "5%",
-    //   left: "center",
-    // },
     legend: {
       show: true,
-      bottom: "5%",
-      left: "center",
+      type: "scroll",
+      icon: "roundRect",
+      bottom: 10,
+      itemGap: 16,
+      itemHeight: 8,
+      itemWidth: 8,
+      itemStyle: {
+        borderDashOffset: 10,
+      },
+      textStyle: {
+        fontSize: 14,
+        color: "#999",
+      },
     },
     tooltip: {},
     series: [],
@@ -163,6 +162,18 @@ export const ChartWidgetComponent = (props) => {
 
   const node = React.useRef();
   const [chartType, setChartType] = React.useState(type);
+  const dataZoom = [
+    {
+      start: 0,
+      end: 100,
+      zoomLock: true,
+      id: "dataZoomY",
+      type: "slider",
+      yAxisIndex: [0],
+      filterMode: "filter",
+      show: true,
+    },
+  ];
   const [chartOptions, setChartOptions] = React.useState({
     ...defaultOptions,
     yAxis:
@@ -170,6 +181,7 @@ export const ChartWidgetComponent = (props) => {
         ? [...yAxis.map((y) => ({ ...defaultOptions.yAxis, ...y }))]
         : { ...defaultOptions.yAxis },
     series,
+    dataZoom: isdataZoom ? dataZoom : [],
   });
 
   const [isChartOption, setIsChartOption] = React.useState(false);
@@ -182,7 +194,6 @@ export const ChartWidgetComponent = (props) => {
     }
     setIsChartOption(false);
   };
-  console.log(series, "series");
 
   React.useEffect(() => {
     document.addEventListener("mousedown", handleChartClick);
