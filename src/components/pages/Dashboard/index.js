@@ -128,7 +128,7 @@ const Dashboard = () => {
           >
             <ChartWidgetComponent
               type="pie"
-              title="CTop 10 Division (YTD)"
+              title="Top 10 Division (YTD)"
               isLoading={false}
               color={[
                 "#77B489",

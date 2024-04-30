@@ -16,6 +16,15 @@ const CostAllocation = () => {
       value: 79,
     },
   ];
+  const columnsdata = React.useMemo(() => {
+    return AllocationData?.columns?.map((a) => ({
+      ...a,
+      resizable: true,
+      sortable: true,
+      width: "fit-content",
+    }));
+  }, []);
+
   return (
     <div className="flex w-full flex-col" style={{ height: "100vh" }}>
       <div
@@ -56,7 +65,7 @@ const CostAllocation = () => {
             }}
             rowHeight={32}
             headerRowHeight={40}
-            columns={AllocationData?.columns}
+            columns={columnsdata}
             rows={AllocationData?.values}
           />
         </div>

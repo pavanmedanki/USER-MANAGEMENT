@@ -348,6 +348,9 @@ export const ChartWidgetComponent = (props) => {
               ? 0
               : item?.yAxisIndex || 0,
           symbolSize: 7,
+          emphasis: {
+            focus: "series",
+          },
         };
 
         if (chartType === "area") seriess.areaStyle = {};

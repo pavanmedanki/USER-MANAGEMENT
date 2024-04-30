@@ -4,52 +4,42 @@ export const analysisData = {
     {
       name: "P&L",
       key: "business_nm",
-      status: 1,
     },
     {
       name: "Division",
       key: "sub_business_nm",
-      status: 1,
     },
     {
       name: "Project",
       key: "cost_center",
-      status: 1,
     },
     {
       name: "Account Name",
       key: "account_name",
-      status: 1,
     },
     {
       name: "Product",
       key: "product_name",
-      status: 1,
     },
     {
       name: "Usage Type",
       key: "line_item_usage_type",
-      status: 1,
     },
     {
       name: "Bill Type",
       key: "bill_type",
-      status: 1,
     },
     {
       name: "Bill Entity",
       key: "billing_entity",
-      status: 1,
     },
     {
       name: "Line Item Type",
       key: "line_item_type",
-      status: 1,
     },
     {
       name: "Cost ($)",
       key: "cost",
-      status: 1,
     },
   ],
   values: [

@@ -30,7 +30,6 @@ export const WidgetHeaderComponent = (props) => {
     handleEdit,
     handleRemove,
     headerIcon = undefined,
-    filterValues,
     widgetFilter,
     widgetFilterLength,
     isChartOption = true,
@@ -38,13 +37,9 @@ export const WidgetHeaderComponent = (props) => {
     moduleUrl,
     ToolTipText,
     refreshIcon,
-    series,
     WidgetInfoIcon,
     infoContent,
     IsIcon,
-    infoIcon = false,
-    infoIconText,
-    analysisPage,
     setViewScreen,
   } = props;
   let configWrap = {

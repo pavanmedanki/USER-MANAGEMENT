@@ -3,6 +3,12 @@ import "react-data-grid/lib/styles.css";
 import React from "react";
 import DataGrid from "react-data-grid";
 import {
+  IconChevronLeft,
+  IconChevronLeftPipe,
+  IconChevronRight,
+  IconChevronRightPipe,
+} from "@tabler/icons-react";
+import {
   Top10CostbyGroup,
   TopcontributorsbyGroup,
 } from "../../constant/chartconstant";
@@ -11,6 +17,14 @@ import KpiOneComponent from "../../KPI/kpionecomponent";
 import { ChartWidgetComponent } from "../../Widgetcomponent/chartwidget";
 
 const CostAnalysis = () => {
+  const columnsdata = React.useMemo(() => {
+    return analysisData?.columns?.map((a) => ({
+      ...a,
+      resizable: true,
+      sortable: true,
+      width: "fit-content",
+    }));
+  }, []);
   const CostOverViewKpiJson = [
     {
       title: "Total Net Unblended Cost (inclusive credit)",
@@ -43,6 +57,24 @@ const CostAnalysis = () => {
       },
     ],
   };
+  const [currentPage, setCurrentPage] = React.useState(1);
+  const [pageSize, setPageSize] = React.useState(12);
+
+  const totalRows = analysisData?.values?.length;
+  const totalPages = Math.ceil(totalRows / pageSize);
+
+  const startRecords = currentPage * pageSize - (pageSize - 1);
+  const endRecords =
+    currentPage === totalPages ? totalRows : pageSize * currentPage;
+
+  const onPageChange = (page) => {
+    setCurrentPage(page);
+  };
+  const paginatedRows = analysisData?.values.slice(
+    (currentPage - 1) * pageSize,
+    currentPage * pageSize
+  );
+  console.log(currentPage, "currentPage");
   return (
     <div
       className="flex h-full w-full flex-col gap-4"
@@ -62,17 +94,60 @@ const CostAnalysis = () => {
         Cost Analysis
       </div>
       <div className="flex space-x-4 w-full">
-        <div style={{ width: "70%" }}>
+        <div style={{ width: "70%", height: "calc(100vh - 58px)" }}>
           <DataGrid
             style={{
-              height: "100vh",
+              height: "450px",
               padding: "0 10px 0 10px",
             }}
             rowHeight={32}
             headerRowHeight={40}
-            columns={analysisData?.columns}
-            rows={analysisData?.values}
+            columns={columnsdata}
+            rows={paginatedRows}
           />
+          <div className="flex justify-between w-100 p-2">
+            <div className="pt-8 text-sm tracking-normal text-gray-500 font-semibold">
+              <span>{`Showing ${currentPage === 1 ? 1 : startRecords} to ${
+                totalRows === analysisData?.values?.length
+                  ? totalRows
+                  : endRecords
+              } of ${totalRows} entries`}</span>
+            </div>
+            <div className="pt-6">
+              <button
+                disabled={currentPage === 1 || totalRows <= pageSize}
+                onClick={() => onPageChange(1)}
+                className="cursor-pointer"
+                aria-label="First Page"
+              >
+                <IconChevronLeftPipe size={18} color="#6c717c" />
+              </button>
+              <button
+                disabled={currentPage === 1 || totalRows <= pageSize}
+                onClick={() => onPageChange(currentPage - 1)}
+                className="cursor-pointer"
+                aria-label="Previous Page"
+              >
+                <IconChevronLeft size={18} color="#6c717c" />
+              </button>
+              <button
+                disabled={currentPage === totalPages}
+                onClick={() => onPageChange(currentPage + 1)}
+                className="cursor-pointer"
+                aria-label="Next Page"
+              >
+                <IconChevronRight size={18} color="#6c717c" />
+              </button>
+              <button
+                disabled={currentPage === totalPages || totalRows <= pageSize}
+                onClick={() => onPageChange(totalPages)}
+                className="cursor-pointer"
+                aria-label="Last Page"
+              >
+                <IconChevronRightPipe size={18} color="#6c717c" />
+              </button>
+            </div>
+          </div>
         </div>
         <div
           style={{

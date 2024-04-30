@@ -30,6 +30,14 @@ const CostOptimization = () => {
       },
     ],
   };
+  const columnsdata = React.useMemo(() => {
+    return CostOptimizationData?.columns?.map((a) => ({
+      ...a,
+      resizable: true,
+      sortable: true,
+      width: "fit-content",
+    }));
+  }, []);
   return (
     <div
       className="flex h-full w-full flex-col gap-4"
@@ -57,7 +65,7 @@ const CostOptimization = () => {
             }}
             rowHeight={32}
             headerRowHeight={40}
-            columns={CostOptimizationData?.columns}
+            columns={columnsdata}
             rows={CostOptimizationData?.values}
           />
         </div>

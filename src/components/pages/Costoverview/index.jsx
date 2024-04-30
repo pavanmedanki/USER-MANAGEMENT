@@ -4,6 +4,7 @@ import {
   costTrend,
   costByCostCenter,
   costbyProducts,
+  costbyAccountsbyProducts,
 } from "../../constant/chartconstant";
 import { ChartWidgetComponent } from "../../Widgetcomponent/chartwidget";
 
@@ -54,6 +55,20 @@ const CostOverview = () => {
       },
     ],
   };
+
+  const costAccountsByProducts = {
+    xAxis: costbyAccountsbyProducts?.data?.x_axis,
+    data: [
+      {
+        name: costbyAccountsbyProducts?.data?.series?.map((item) => item?.name),
+        type: "stack bar",
+        value: costbyAccountsbyProducts?.data?.series?.map(
+          (item) => item?.values
+        ),
+      },
+    ],
+  };
+
   const costTrendData = {
     xAxis: costTrend?.data?.x_axis,
     data: [
@@ -82,7 +97,6 @@ const CostOverview = () => {
       },
     ],
   };
-  console.log(costByCostCenter?.data?.series?.at(0)?.values, "costTrend");
 
   return (
     <div className="flex h-full w-full flex-col" style={{ height: "100vh" }}>
@@ -241,7 +255,7 @@ const CostOverview = () => {
               ]}
               userEditAccess={false}
               isdataZoom={true}
-              series={formatChartData}
+              series={costAccountsByProducts}
               // handleRefresh={() => handleRefersh()}
             />
           </div>
